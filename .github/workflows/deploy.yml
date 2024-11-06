@@ -15,11 +15,11 @@ concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 
-# jobs:
-#   deploy-api:
-#     if: github.event.inputs.service == 'api'
-#     runs-on: ubuntu-latest
-#     environment: api.development
+jobs:
+  deploy-api:
+    if: github.event.inputs.service == 'api'
+    runs-on: ubuntu-latest
+    environment: api.development
 #     steps:
 #       - uses: actions/checkout@v3
 #         with:
